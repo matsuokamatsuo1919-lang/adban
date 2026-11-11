@@ -1,0 +1,16 @@
+* text=auto
+
+# バイナリ
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.zip binary
+
+# 生成物は差分を表示しない（巨大なので）
+rules/** -diff
+*.json -diff

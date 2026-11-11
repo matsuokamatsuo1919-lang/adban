@@ -1,0 +1,1 @@
+(self.__adbanScriptlets ||= []).push(JSON.parse("{\"entries\":[[\"addEventListener-defuser\",\"/click|load/\",\"/document\\\\.location|pop\\\\.|exo|cookie|\\\\.php/\"],[\"no-window-open-if\",\"/ok_|pemsrv\\\\.com|window\\\\.location\\\\.href/\"],[\"set-constant\",\"doAdRedirect\",\"noopFunc\"]],\"add\":{\"pdftoshokan.com\":[0,1,2]},\"remove\":{}}"));

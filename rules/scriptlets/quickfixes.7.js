@@ -1,0 +1,1 @@
+(self.__adbanScriptlets ||= []).push(JSON.parse("{\"entries\":[[\"replace-node-text\",\"script\",\"(popupLoaded)\",\"(true)\"],[\"prevent-fetch\",\"/\\\\?abg=|adsbygoogle|tpc\\\\.googlesyndication\\\\.com|doubleclick\\\\.net|googleadservices\\\\.com/\"]],\"add\":{\"embedtv.best\":[0],\"wakuraw.com\":[1]},\"remove\":{}}"));

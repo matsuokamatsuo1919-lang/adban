@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: プライバシーポリシー
+    url: https://matsuokamatsuo1919-lang.github.io/adban/privacy
+    about: ADBAN はデータを収集・送信しません。取り扱いの詳細はこちらです。
+  - name: サポートのページ（よくある質問・使い方）
+    url: https://matsuokamatsuo1919-lang.github.io/adban/
+    about: 広告が残る・サイトが壊れるときの対処や、設定のしかたをまとめています。

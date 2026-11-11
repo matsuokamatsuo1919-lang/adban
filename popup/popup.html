@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>ADBAN</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../icons/icon32.png" alt="" width="22" height="22">
+    <h1>ADBAN</h1>
+    <label class="switch" title="すべてのサイトでのブロック">
+      <input type="checkbox" id="enabled" aria-label="ADBAN を有効にする">
+      <span></span>
+    </label>
+  </header>
+
+  <main>
+    <div class="host" id="host">—</div>
+    <div class="stat">
+      <strong id="count">–</strong>
+      <span>件のリクエストをこのページでブロック</span>
+    </div>
+
+    <label class="row" for="siteEnabled">
+      <span>このサイトでブロックする</span>
+      <span class="switch">
+        <input type="checkbox" id="siteEnabled">
+        <span></span>
+      </span>
+    </label>
+
+    <div class="notice" id="notice" hidden>
+      <span>再読み込みすると反映されます</span>
+      <button id="reload" type="button">再読み込み</button>
+    </div>
+    <p class="error" id="error" hidden></p>
+  </main>
+
+  <footer>
+    <button id="pick" type="button" class="primary">要素を選んでブロック</button>
+    <button id="options" type="button">設定</button>
+  </footer>
+
+  <section class="report">
+    <button id="reportToggle" type="button" class="link" aria-expanded="false" aria-controls="reportMenu">問題を報告</button>
+    <div id="reportMenu" class="menu" hidden>
+      <button type="button" data-kind="ad-remains">広告が残っている</button>
+      <button type="button" data-kind="site-broken">ページが壊れた・表示がおかしい</button>
+      <button type="button" data-kind="other">ご意見・ご要望</button>
+    </div>
+    <p class="report-msg" id="reportMsg" role="status" hidden></p>
+    <textarea id="reportText" rows="6" readonly hidden aria-label="報告用の情報"></textarea>
+    <button id="reportOpen" type="button" hidden>サポートのページを開く</button>
+  </section>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

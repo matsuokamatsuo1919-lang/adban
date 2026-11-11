@@ -1,0 +1,1 @@
+(self.__adbanScriptlets ||= []).push(JSON.parse("{\"entries\":[[\"prevent-setTimeout\",\"\",\"4000-\"],[\"prevent-fetch\",\"/\\\\?abg=|adsbygoogle|tpc\\\\.googlesyndication\\\\.com|doubleclick\\\\.net|googleadservices\\\\.com/\"]],\"add\":{\"gecmisi.com.tr\":[0],\"rawfree.top\":[1]},\"remove\":{}}"));

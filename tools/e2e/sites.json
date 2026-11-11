@@ -1,0 +1,74 @@
+[
+  {"url": "https://news.yahoo.co.jp/", "category": "jp-news", "note": "Yahoo!ニュース トップ", "quick": true},
+  {"url": "https://www.asahi.com/", "category": "jp-news", "note": "朝日新聞", "quick": true},
+  {"url": "https://mainichi.jp/", "category": "jp-news", "note": "毎日新聞"},
+  {"url": "https://www.sankei.com/", "category": "jp-news", "note": "産経ニュース"},
+  {"url": "https://www.itmedia.co.jp/news/", "category": "jp-news", "note": "ITmedia NEWS"},
+  {"url": "https://gigazine.net/", "category": "jp-news", "note": "GIGAZINE", "quick": true},
+  {"url": "https://www.watch.impress.co.jp/", "category": "jp-news", "note": "Impress Watch"},
+  {"url": "https://www.nikkei.com/", "category": "jp-news", "note": "日本経済新聞"},
+  {"url": "https://www.yomiuri.co.jp/", "category": "jp-news", "note": "読売新聞"},
+  {"url": "https://toyokeizai.net/", "category": "jp-news", "note": "東洋経済オンライン"},
+  {"url": "https://www.zakzak.co.jp/", "category": "jp-news", "note": "ZAKZAK(夕刊フジ)"},
+  {"url": "https://news.livedoor.com/", "category": "jp-news", "note": "livedoor ニュース"},
+
+  {"url": "https://ameblo.jp/", "category": "jp-blog", "note": "アメーバブログ", "quick": true},
+  {"url": "https://note.com/", "category": "jp-blog", "note": "note"},
+  {"url": "https://staff.hatenablog.com/", "category": "jp-blog", "note": "はてなブログ(公式ブログ)"},
+  {"url": "https://togetter.com/", "category": "jp-blog", "note": "Togetter(まとめ)"},
+
+  {"url": "https://tver.jp/", "category": "jp-video", "note": "TVer", "quick": true},
+  {"url": "https://abema.tv/", "category": "jp-video", "note": "ABEMA"},
+  {"url": "https://www.nicovideo.jp/ranking", "category": "jp-video", "note": "niconico ランキング"},
+
+  {"url": "https://www.cnn.com/", "category": "en-news", "note": "CNN", "quick": true},
+  {"url": "https://www.bbc.com/news", "category": "en-news", "note": "BBC News"},
+  {"url": "https://www.theguardian.com/international", "category": "en-news", "note": "The Guardian", "quick": true},
+  {"url": "https://www.dailymail.co.uk/home/index.html", "category": "en-news", "note": "Daily Mail", "quick": true},
+  {"url": "https://www.forbes.com/", "category": "en-news", "note": "Forbes", "quick": true},
+  {"url": "https://www.businessinsider.com/", "category": "en-news", "note": "Business Insider"},
+  {"url": "https://www.foxnews.com/", "category": "en-news", "note": "Fox News"},
+  {"url": "https://www.usatoday.com/", "category": "en-news", "note": "USA Today"},
+  {"url": "https://www.independent.co.uk/", "category": "en-news", "note": "The Independent"},
+  {"url": "https://www.huffpost.com/", "category": "en-news", "note": "HuffPost"},
+
+  {"url": "https://www.theverge.com/", "category": "tech", "note": "The Verge", "quick": true},
+  {"url": "https://arstechnica.com/", "category": "tech", "note": "Ars Technica"},
+  {"url": "https://techcrunch.com/", "category": "tech", "note": "TechCrunch"},
+  {"url": "https://www.wired.com/", "category": "tech", "note": "Wired"},
+  {"url": "https://www.engadget.com/", "category": "tech", "note": "Engadget"},
+  {"url": "https://www.cnet.com/", "category": "tech", "note": "CNET"},
+
+  {"url": "https://www.amazon.co.jp/", "category": "shopping", "note": "Amazon.co.jp", "quick": true},
+  {"url": "https://www.rakuten.co.jp/", "category": "shopping", "note": "楽天市場"},
+  {"url": "https://kakaku.com/", "category": "shopping", "note": "価格.com", "quick": true},
+  {"url": "https://shopping.yahoo.co.jp/", "category": "shopping", "note": "Yahoo!ショッピング"},
+
+  {"url": "https://cookpad.com/", "category": "recipe", "note": "クックパッド"},
+  {"url": "https://www.allrecipes.com/", "category": "recipe", "note": "AllRecipes", "quick": true},
+  {"url": "https://kurashiru.com/", "category": "recipe", "note": "クラシル"},
+
+  {"url": "https://www.reddit.com/", "category": "forum", "note": "Reddit"},
+  {"url": "https://5ch.net/", "category": "forum", "note": "5ch"},
+  {"url": "https://www.quora.com/", "category": "forum", "note": "Quora"},
+  {"url": "https://news.ycombinator.com/", "category": "forum", "note": "Hacker News(広告なしの対照)"},
+
+  {"url": "https://tenki.jp/", "category": "weather", "note": "tenki.jp"},
+  {"url": "https://weather.yahoo.co.jp/weather/", "category": "weather", "note": "Yahoo!天気"},
+  {"url": "https://weather.com/", "category": "weather", "note": "The Weather Channel", "quick": true},
+
+  {"url": "https://sports.yahoo.co.jp/", "category": "sports", "note": "Yahoo!スポーツ"},
+  {"url": "https://www.nikkansports.com/", "category": "sports", "note": "日刊スポーツ"},
+  {"url": "https://www.espn.com/", "category": "sports", "note": "ESPN"},
+
+  {"url": "https://www.fandom.com/", "category": "wiki", "note": "Fandom トップ"},
+  {"url": "https://ja.wikipedia.org/wiki/%E5%BA%83%E5%91%8A", "category": "wiki", "note": "Wikipedia(広告なしの対照)"},
+
+  {"url": "https://www.pinterest.com/", "category": "image", "note": "Pinterest(未ログインのトップ)"},
+
+  {"url": "https://www.amazon.co.jp/gp/video/storefront", "category": "prime-video", "note": "Prime Video(amazon.co.jp)"},
+  {"url": "https://www.primevideo.com/", "category": "prime-video", "note": "Prime Video(primevideo.com)"},
+
+  {"url": "https://www.youtube.com/", "category": "video", "note": "YouTube トップ"},
+  {"url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "category": "video", "note": "YouTube 動画ページ"}
+]

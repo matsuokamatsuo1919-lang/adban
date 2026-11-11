@@ -1,0 +1,85 @@
+{
+  "manifest_version": 3,
+  "name": "ADBAN",
+  "version": "1.1.0",
+  "description": "ウェブサイトの広告とトラッカーをブロックし、広告ブロッカーへの対策も回避します。",
+  "minimum_chrome_version": "110",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "ADBAN",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "alarms",
+    "idle",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "scripting",
+    "storage",
+    "webNavigation"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/cosmetic.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true,
+      "match_origin_as_fallback": true
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/procedural.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true,
+      "match_origin_as_fallback": true
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/slots.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["resources/*"],
+      "matches": ["<all_urls>"],
+      "use_dynamic_url": true
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      { "id": "base", "enabled": true, "path": "rules/base.json" },
+      { "id": "easylist", "enabled": true, "path": "rules/easylist.json" },
+      { "id": "japanese", "enabled": true, "path": "rules/japanese.json" },
+      { "id": "ubo", "enabled": true, "path": "rules/ubo.json" },
+      { "id": "easyprivacy", "enabled": true, "path": "rules/easyprivacy.json" },
+      { "id": "unbreak", "enabled": true, "path": "rules/unbreak.json" },
+      { "id": "quickfixes", "enabled": true, "path": "rules/quickfixes.json" },
+      { "id": "badware", "enabled": true, "path": "rules/badware.json" },
+      { "id": "peterlowe", "enabled": true, "path": "rules/peterlowe.json" },
+      { "id": "privacy", "enabled": true, "path": "rules/privacy.json" },
+      { "id": "adguarddns", "enabled": true, "path": "rules/adguarddns.json" }
+    ]
+  }
+}

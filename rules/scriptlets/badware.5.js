@@ -1,0 +1,1 @@
+(self.__adbanScriptlets ||= []).push(JSON.parse("{\"entries\":[[\"abort-current-script\",\"WebSocket\",\"event.data\"],[\"remove-node-text\",\"script\",\"(self);\"],[\"abort-current-script\",\"atob\",\"new\"]],\"add\":{\"jollibee.com.vn\":[0],\"pentest.blog\":[1,2],\"tvojstyl.sk\":[0]},\"remove\":{}}"));

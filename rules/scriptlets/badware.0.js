@@ -1,0 +1,1 @@
+(self.__adbanScriptlets ||= []).push(JSON.parse("{\"entries\":[[\"remove-node-text\",\"script\",\"String.fromCharCode\"],[\"noeval-if\",\"tigervip2\"]],\"add\":{\"aspireatlas.com\":[0],\"www.cambe.pr.gov.br\":[1]},\"remove\":{}}"));

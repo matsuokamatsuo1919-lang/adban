@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ADBAN の設定</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <header class="page-head">
+      <img src="../icons/icon48.png" alt="" width="40" height="40">
+      <div>
+        <h1>ADBAN の設定</h1>
+        <p>保存すると、次に開いたページから反映されます。</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>フィルターリスト</h2>
+      <p class="desc">
+        ネットワークの遮断、広告の要素を隠す処理、広告ブロッカー対策を止めるスクリプレットに使うリストです。
+        「広告ブロッカーを無効にしてください」と出るサイトへの対策は、主に uBlock filters に入っています。
+      </p>
+      <label class="check" data-dev-update>
+        <input type="checkbox" id="autoReload">
+        <span>
+          リストの更新を自動で取り込む
+          <small>
+            パソコン側で更新したリスト（tools/build-filters.mjs の結果）を検知すると、ADBAN を自動で読み込み直します。
+            ブラウザーを 60 秒以上操作していないときだけ行うので、動画の視聴中などは邪魔しません。
+            読み込み直したあと、すでに開いているタブは、ページを開き直すまで古い状態のままです。
+          </small>
+        </span>
+      </label>
+      <div id="lists" class="lists"></div>
+      <p class="error" id="rulesetError" hidden></p>
+      <p class="error" id="scriptletError" hidden></p>
+      <p class="desc small" data-dev-update>
+        リストを新しくするには、拡張機能のフォルダーで <code>node tools/build-filters.mjs</code> を実行します
+        （上の設定がオンなら、ADBAN は自動で読み込み直します。オフなら、拡張機能の管理画面で再読み込みします）。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>空の広告枠と記事広告</h2>
+      <p class="desc">フィルターや通信の遮断では止められない、ページに残った広告の跡を、見た目から判断してたたみます。</p>
+      <label class="check">
+        <input type="checkbox" id="collapseSlots">
+        <span>
+          空の広告枠をたたむ
+          <small>広告の中身が消えたあとに残る、「広告」「Advertisement」などの札だけの空の枠をたたみます。</small>
+        </span>
+      </label>
+      <label class="check">
+        <input type="checkbox" id="collapsePromo">
+        <span>
+          記事広告を隠す（実験的）
+          <small>「PR」「広告」「スポンサード」などの表記がある記事広告のカードを隠します。普通の記事まで隠れるときは、このサイトだけ ADBAN をオフにするか、この設定をオフにしてください。</small>
+        </span>
+      </label>
+    </section>
+
+    <section class="card">
+      <h2>YouTube</h2>
+      <label class="check">
+        <input type="checkbox" id="youtubePrune">
+        <span>
+          動画の広告データを取り除く
+          <small>オフにしても、広告が流れたときにミュートして早送り・スキップする処理は動きます。</small>
+        </span>
+      </label>
+    </section>
+
+    <section class="card">
+      <h2>Prime Video の診断</h2>
+      <p class="desc">
+        Prime Video で広告が流れたら、そのあとでこの画面を開き、「診断をコピー」を押して、内容を貼り付けて送ってください。
+        広告の見つけ方を直すための手がかりになります。
+        保存されるのは、広告まわりの画面の部品の名前（class など）と、動画の再生の状態（再生位置・速度など）、
+        広告や再生に関わる通信の宛先（ホスト名とパスだけ。クエリ・中身は含みません）だけです。
+        作品名・アカウント・通信の中身は含まれません。保存先はこのブラウザーの中だけで、勝手に送られることはありません。
+      </p>
+      <label class="check">
+        <input type="checkbox" id="pvDiagEnabled">
+        <span>
+          診断を記録する
+          <small>既定ではオフです。Prime Video の広告が止まらないときに、原因を調べる手がかりを残したい場合だけ、オンにしてください。オフにしても、すでに記録した分は残ります（「診断を消す」で消せます）。</small>
+        </span>
+      </label>
+      <p class="desc" id="pvDiagCount">記録: 確認中…</p>
+      <div class="row">
+        <button id="pvDiagCopy" type="button">診断をコピー</button>
+        <button id="pvDiagClear" type="button">診断を消す</button>
+        <span id="pvDiagStatus" role="status"></span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>ブロックしないサイト</h2>
+      <p class="desc">1 行に 1 つのドメイン。サブドメインにも当てはまります（example.com なら www.example.com も）。</p>
+      <textarea id="allowlist" rows="6" spellcheck="false" placeholder="example.com"></textarea>
+      <p class="error" id="allowlistError" hidden></p>
+    </section>
+
+    <section class="card">
+      <h2>自分で追加したフィルター</h2>
+      <p class="desc">Adblock Plus と同じ書き方です。「要素を選んでブロック」で選んだものもここに入ります。</p>
+      <textarea id="customFilters" rows="12" spellcheck="false"
+        placeholder="||ads.example.com^&#10;example.com##.sidebar-banner&#10;##.sponsored-box"></textarea>
+      <details>
+        <summary>書き方の例</summary>
+        <dl>
+          <dt><code>||ads.example.com^</code></dt>
+          <dd>ads.example.com（とそのサブドメイン）への通信をすべて止める</dd>
+          <dt><code>||example.com/banner/$image</code></dt>
+          <dd>example.com/banner/ で始まる画像を止める</dd>
+          <dt><code>@@||cdn.example.com^</code></dt>
+          <dd>cdn.example.com への通信は止めない（例外）</dd>
+          <dt><code>example.com##.sidebar-banner</code></dt>
+          <dd>example.com で class="sidebar-banner" の要素を隠す</dd>
+          <dt><code>##.sponsored-box</code></dt>
+          <dd>すべてのサイトで class="sponsored-box" の要素を隠す</dd>
+          <dt><code>example.com#@#.ad-banner</code></dt>
+          <dd>example.com では .ad-banner を隠さない（例外）</dd>
+          <dt><code>example.com##body:style(overflow: auto !important)</code></dt>
+          <dd>example.com で、警告に止められたスクロールを戻す（見た目を変える）</dd>
+          <dt><code>! メモ</code></dt>
+          <dd>! で始まる行はコメント</dd>
+        </dl>
+      </details>
+      <p class="error" id="customError" hidden></p>
+    </section>
+
+    <section class="card">
+      <h2>意見・不具合の報告</h2>
+      <p class="desc">
+        報告用の情報をコピーして、サポートのページを開きます。何も自動では送られません。コピーされる内容は下に表示されます。
+        開いたページに貼り付けて、自分で送ってください。
+      </p>
+      <div class="row" id="reportButtons">
+        <button type="button" data-kind="ad-remains">広告が残っている</button>
+        <button type="button" data-kind="site-broken">ページが壊れた・表示がおかしい</button>
+        <button type="button" data-kind="other">ご意見・ご要望</button>
+      </div>
+      <p class="desc" id="reportStatus" role="status" hidden></p>
+      <textarea id="reportPreview" rows="14" readonly spellcheck="false" aria-label="コピーされる内容"></textarea>
+      <p class="desc small" id="reportLinks" hidden>
+        <a id="privacyLink" href="#" target="_blank" rel="noopener noreferrer" hidden>プライバシーポリシー</a>
+        <a id="sourceLink" href="#" target="_blank" rel="noopener noreferrer" hidden>ソースコード</a>
+      </p>
+    </section>
+
+    <div class="actions">
+      <span id="status" role="status"></span>
+      <button id="save" type="button" class="primary">保存</button>
+    </div>
+  </main>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>

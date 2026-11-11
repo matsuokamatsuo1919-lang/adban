@@ -1,0 +1,1 @@
+(self.__adbanScriptlets ||= []).push(JSON.parse("{\"entries\":[[\"no-window-open-if\"],[\"abort-current-script\",\"Math\",\"localStorage['\\\\x\"],[\"prevent-fetch\",\"g.doubleclick.net\",\"length:100000\"],[\"prevent-fetch\",\"favicon\",\"length:252\"]],\"add\":{\"4k2h4w04.xyz\":[0,1],\"global.novelpia.com\":[2,3]},\"remove\":{}}"));

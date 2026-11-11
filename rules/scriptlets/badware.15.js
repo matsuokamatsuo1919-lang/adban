@@ -1,0 +1,1 @@
+(self.__adbanScriptlets ||= []).push(JSON.parse("{\"entries\":[[\"abort-current-script\",\"fetch\",\"_0x\",\"/^data:/\"],[\"abort-on-property-write\",\"ai_front\"],[\"remove-node-text\",\"script\",\"/document\\\\.currentScript\\\\.remove|0x0/\"]],\"add\":{\"https-xhamster.com\":[0,1],\"longhall.consulting\":[2]},\"remove\":{}}"));

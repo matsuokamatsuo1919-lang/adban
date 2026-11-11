@@ -1,0 +1,196 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f6f6f7;
+  --text: #1c1c1f;
+  --muted: #6b6b73;
+  --border: #e4e4e7;
+  --accent: #e5484d;
+  --accent-hover: #d13d42;
+  --switch-off: #c8c8ce;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #18181b;
+    --surface: #232326;
+    --text: #ececef;
+    --muted: #a0a0a8;
+    --border: #2e2e33;
+    --switch-off: #46464d;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 300px;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 13px/1.5 system-ui, "Hiragino Sans", "Yu Gothic UI", Meiryo, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+h1 {
+  flex: 1;
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: .04em;
+}
+
+main { padding: 14px; }
+
+.host {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.stat {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 10px 0 14px;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.stat strong {
+  font-size: 26px;
+  line-height: 1;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat span { color: var(--muted); font-size: 12px; }
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.notice[hidden], .error[hidden] { display: none; }
+
+.error { margin: 10px 0 0; color: var(--accent); font-size: 12px; }
+
+footer {
+  display: flex;
+  gap: 8px;
+  padding: 0 14px 14px;
+}
+
+button {
+  font: inherit;
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) { background: var(--surface); }
+button:disabled { opacity: .45; cursor: default; }
+
+button.primary {
+  flex: 1;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+button.primary:hover:not(:disabled) { background: var(--accent-hover); }
+
+.notice button { padding: 3px 10px; font-size: 12px; }
+
+/* スイッチ */
+.switch { position: relative; display: inline-flex; flex: none; }
+.switch input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.switch input:disabled { cursor: default; }
+.switch span {
+  width: 36px;
+  height: 20px;
+  border-radius: 999px;
+  background: var(--switch-off);
+  transition: background .15s;
+  pointer-events: none;
+}
+.switch span::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+  transition: transform .15s;
+}
+.switch input:checked + span { background: var(--accent); }
+.switch input:checked + span::after { transform: translateX(16px); }
+.switch input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+.switch input:disabled + span { opacity: .45; }
+
+body.off main { opacity: .55; }
+
+/* 問題を報告（フッターの小さなリンク風） */
+.report { padding: 0 14px 12px; text-align: center; }
+.report [hidden] { display: none !important; }
+
+button.link {
+  padding: 2px 6px;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+button.link:hover:not(:disabled) { background: none; color: var(--text); }
+
+.report .menu { display: grid; gap: 6px; margin-top: 8px; }
+.report .menu button { padding: 6px 10px; font-size: 12px; text-align: left; }
+
+.report-msg { margin: 8px 0 0; color: var(--muted); font-size: 12px; text-align: left; }
+
+.report textarea {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font: 11px/1.45 ui-monospace, Consolas, monospace;
+}
+
+#reportOpen { margin-top: 8px; font-size: 12px; }

@@ -1,0 +1,1 @@
+(self.__adbanScriptlets ||= []).push(JSON.parse("{\"entries\":[[\"abort-current-script\",\"WebSocket\",\"event.data\"],[\"abort-current-script\",\"fetch\",\"_0x\",\"/^data:/\"],[\"abort-on-property-write\",\"ai_front\"]],\"add\":{\"forqueen.cz\":[0],\"skybap.shop\":[1,2]},\"remove\":{}}"));

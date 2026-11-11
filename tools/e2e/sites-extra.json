@@ -1,0 +1,89 @@
+[
+  {"url": "https://chiebukuro.yahoo.co.jp/", "category": "jp-qa", "note": "Yahoo!知恵袋"},
+  {"url": "https://okwave.jp/", "category": "jp-qa", "note": "OKWAVE"},
+
+  {"url": "https://www.weblio.jp/", "category": "jp-dict", "note": "Weblio 辞書"},
+  {"url": "https://eow.alc.co.jp/", "category": "jp-dict", "note": "英辞郎 on the WEB"},
+
+  {"url": "https://gamewith.jp/", "category": "jp-game", "note": "GameWith"},
+  {"url": "https://game8.jp/", "category": "jp-game", "note": "Game8"},
+  {"url": "https://www.famitsu.com/", "category": "jp-game", "note": "ファミ通.com"},
+  {"url": "https://www.4gamer.net/", "category": "jp-game", "note": "4Gamer.net"},
+  {"url": "https://automaton-media.com/", "category": "jp-game", "note": "AUTOMATON"},
+
+  {"url": "https://natalie.mu/", "category": "jp-entame", "note": "音楽ナタリー"},
+  {"url": "https://www.oricon.co.jp/", "category": "jp-entame", "note": "ORICON NEWS"},
+  {"url": "https://www.cinematoday.jp/", "category": "jp-entame", "note": "シネマトゥデイ"},
+  {"url": "https://eiga.com/", "category": "jp-entame", "note": "映画.com"},
+  {"url": "https://news.mynavi.jp/", "category": "jp-entame", "note": "マイナビニュース"},
+
+  {"url": "https://minkabu.jp/", "category": "jp-finance", "note": "みんかぶ"},
+  {"url": "https://kabutan.jp/", "category": "jp-finance", "note": "株探"},
+  {"url": "https://finance.yahoo.co.jp/", "category": "jp-finance", "note": "Yahoo!ファイナンス"},
+  {"url": "https://diamond.jp/", "category": "jp-finance", "note": "ダイヤモンド・オンライン"},
+  {"url": "https://www.bloomberg.co.jp/", "category": "jp-finance", "note": "Bloomberg 日本語"},
+
+  {"url": "https://www.jalan.net/", "category": "jp-life", "note": "じゃらん"},
+  {"url": "https://tabelog.com/", "category": "jp-life", "note": "食べログ"},
+  {"url": "https://delishkitchen.tv/", "category": "jp-life", "note": "DELISH KITCHEN(レシピ)"},
+  {"url": "https://oceans-nadia.com/", "category": "jp-life", "note": "Nadia(レシピ)"},
+  {"url": "https://transit.yahoo.co.jp/", "category": "jp-life", "note": "Yahoo!乗換案内"},
+  {"url": "https://www.ikyu.com/", "category": "jp-life", "note": "一休.com"},
+  {"url": "https://travel.rakuten.co.jp/", "category": "jp-life", "note": "楽天トラベル"},
+
+  {"url": "https://www3.nhk.or.jp/news/", "category": "jp-news-more", "note": "NHK ニュース(広告なしの対照)"},
+  {"url": "https://www.kyodo.co.jp/", "category": "jp-news-more", "note": "共同通信"},
+  {"url": "https://www.jiji.com/", "category": "jp-news-more", "note": "時事ドットコム"},
+  {"url": "https://www.cnn.co.jp/", "category": "jp-news-more", "note": "CNN.co.jp"},
+  {"url": "https://www.gizmodo.jp/", "category": "jp-news-more", "note": "ギズモード・ジャパン"},
+  {"url": "https://www.lifehacker.jp/", "category": "jp-news-more", "note": "ライフハッカー"},
+
+  {"url": "https://alfalfalfa.com/", "category": "jp-matome", "note": "アルファルファモザイク"},
+  {"url": "https://nlab.itmedia.co.jp/", "category": "jp-matome", "note": "ねとらぼ"},
+  {"url": "https://dic.pixiv.net/", "category": "jp-matome", "note": "ピクシブ百科事典"},
+  {"url": "https://www.j-cast.com/", "category": "jp-matome", "note": "J-CASTニュース"},
+
+  {"url": "https://apnews.com/", "category": "en-news-more", "note": "AP News"},
+  {"url": "https://www.nbcnews.com/", "category": "en-news-more", "note": "NBC News"},
+  {"url": "https://www.cbsnews.com/", "category": "en-news-more", "note": "CBS News"},
+  {"url": "https://nypost.com/", "category": "en-news-more", "note": "New York Post"},
+  {"url": "https://www.thesun.co.uk/", "category": "en-news-more", "note": "The Sun"},
+
+  {"url": "https://www.buzzfeed.com/", "category": "en-lifestyle", "note": "BuzzFeed"},
+  {"url": "https://people.com/", "category": "en-lifestyle", "note": "People"},
+
+  {"url": "https://www.webmd.com/", "category": "en-health", "note": "WebMD"},
+  {"url": "https://www.healthline.com/", "category": "en-health", "note": "Healthline"},
+  {"url": "https://www.medicalnewstoday.com/", "category": "en-health", "note": "Medical News Today"},
+
+  {"url": "https://www.rottentomatoes.com/", "category": "en-entertainment", "note": "Rotten Tomatoes"},
+  {"url": "https://variety.com/", "category": "en-entertainment", "note": "Variety"},
+  {"url": "https://www.hollywoodreporter.com/", "category": "en-entertainment", "note": "The Hollywood Reporter"},
+
+  {"url": "https://www.ign.com/", "category": "en-gaming", "note": "IGN"},
+  {"url": "https://www.gamespot.com/", "category": "en-gaming", "note": "GameSpot"},
+  {"url": "https://www.polygon.com/", "category": "en-gaming", "note": "Polygon"},
+  {"url": "https://kotaku.com/", "category": "en-gaming", "note": "Kotaku"},
+  {"url": "https://www.pcgamer.com/", "category": "en-gaming", "note": "PC Gamer"},
+
+  {"url": "https://www.dictionary.com/", "category": "en-reference", "note": "Dictionary.com"},
+  {"url": "https://www.merriam-webster.com/", "category": "en-reference", "note": "Merriam-Webster"},
+
+  {"url": "https://www.howtogeek.com/", "category": "en-tech-more", "note": "How-To Geek"},
+  {"url": "https://www.tomshardware.com/", "category": "en-tech-more", "note": "Tom's Hardware"},
+
+  {"url": "https://www.investopedia.com/", "category": "en-finance", "note": "Investopedia"},
+  {"url": "https://www.cnbc.com/", "category": "en-finance", "note": "CNBC"},
+  {"url": "https://finance.yahoo.com/", "category": "en-finance", "note": "Yahoo Finance"},
+
+  {"url": "https://www.accuweather.com/", "category": "en-travel", "note": "AccuWeather"},
+
+  {"url": "https://elpais.com/", "category": "intl", "note": "El País(スペイン語)"},
+  {"url": "https://www.lemonde.fr/", "category": "intl", "note": "Le Monde(フランス語)"},
+  {"url": "https://www.spiegel.de/", "category": "intl", "note": "Der Spiegel(ドイツ語)"},
+  {"url": "https://www.bild.de/", "category": "intl", "note": "Bild(ドイツ語)"},
+  {"url": "https://timesofindia.indiatimes.com/", "category": "intl", "note": "Times of India"},
+  {"url": "https://www.naver.com/", "category": "intl", "note": "NAVER(韓国)"},
+  {"url": "https://www.corriere.it/", "category": "intl", "note": "Corriere della Sera(イタリア語)"},
+  {"url": "https://www.globo.com/", "category": "intl", "note": "Globo(ポルトガル語)"}
+]

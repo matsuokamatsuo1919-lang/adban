@@ -1,0 +1,8 @@
+[
+  {"url": "https://www.youtube.com/watch?v=kJQP7kiw5Fk", "label": "Despacito(人気の音楽動画)", "note": "ラテン音楽、再生数が非常に多い"},
+  {"url": "https://www.youtube.com/watch?v=JGwWNGJdvx8", "label": "Shape of You(人気の音楽動画)", "note": "別の音楽レーベルのチャンネル"},
+  {"url": "https://www.youtube.com/watch?v=TcMBFSGVi1c", "label": "Avengers: Endgame 予告編", "note": "映画の予告編"},
+  {"url": "https://www.youtube.com/watch?v=ZRtdQ81jPUQ", "label": "YOASOBI アイドル(日本の音楽動画)", "note": "日本向けの広告が出やすい"},
+  {"url": "https://www.youtube.com/watch?v=OPf0YbXqDm0", "label": "Uptown Funk(人気の音楽動画)", "note": "音楽動画"},
+  {"url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "label": "Never Gonna Give You Up", "note": "前回の計測で使った動画(広告が出なかった)"}
+]

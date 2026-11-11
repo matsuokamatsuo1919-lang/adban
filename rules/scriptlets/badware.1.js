@@ -1,0 +1,1 @@
+(self.__adbanScriptlets ||= []).push(JSON.parse("{\"entries\":[[\"abort-on-stack-trace\",\"XMLHttpRequest\",\"/wp-content\"],[\"abort-current-script\",\"WebSocket\",\"event.data\"]],\"add\":{\"rapidkil.com.au\":[0],\"szaszmotorshop.hu\":[1]},\"remove\":{}}"));

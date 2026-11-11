@@ -1,0 +1,14 @@
+# 生成物・作業用
+dist/
+tools/e2e/out/
+_metadata/
+node_modules/
+rules/.tmp-build/
+.tmp-build/
+tools/update-filters.log
+*.log
+*.zip
+
+# OS・エディターのゴミ
+Thumbs.db
+.DS_Store

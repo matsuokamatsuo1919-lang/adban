@@ -1,0 +1,1 @@
+(self.__adbanScriptlets ||= []).push(JSON.parse("{\"entries\":[[\"abort-current-script\",\"fetch\",\"_0x\",\"/^data:/\"],[\"abort-on-property-write\",\"ai_front\"]],\"add\":{\"abogadosrosarinos.com\":[0,1]},\"remove\":{}}"));

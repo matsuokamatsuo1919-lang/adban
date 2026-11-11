@@ -1,0 +1,1 @@
+(self.__adbanScriptlets ||= []).push(JSON.parse("{\"entries\":[[\"remove-node-text\",\"script\",\"randomUUID\"],[\"abort-current-script\",\"WebSocket\",\"event.data\"]],\"add\":{\"cizitensports.com\":[0],\"joinusonline.net\":[1]},\"remove\":{}}"));

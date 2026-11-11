@@ -1,0 +1,38 @@
+name: ご要望・ご意見
+description: こうなったらよい、という要望や感想を教えてください
+title: "[要望] "
+labels: ["要望"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご意見ありがとうございます。この場所は**誰でも読める公開の場所**です。名前・メールアドレス・パスワード・住所・閲覧履歴・アカウント情報は書かないでください。
+        すべてのご要望にお応えできるとは限りませんが、今後の参考にします。
+  - type: textarea
+    id: wish
+    attributes:
+      label: ご要望・ご意見
+      description: どのようなことがしたいですか。
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 困っていること・理由（任意）
+      description: いまはどうしていて、何が不便ですか。
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: ADBAN の版（任意）
+      placeholder: 例 1.1.0
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 個人情報について
+      options:
+        - label: 名前・メールアドレス・パスワード・住所・閲覧履歴・アカウント情報を書いていません
+          required: true

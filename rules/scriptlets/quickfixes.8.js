@@ -1,0 +1,1 @@
+(self.__adbanScriptlets ||= []).push(JSON.parse("{\"entries\":[[\"remove-node-text\",\"script\",\"adserverDomain\",\"excludes\",\"debugger\"],[\"replace-node-text\",\"script\",\"/window.navigator.brave.+;/\",\"false;\"],[\"prevent-fetch\",\"summerday\",\"length:10\",\"{\\\"type\\\":\\\"cors\\\"}\"]],\"add\":{\"omuzaani.me\":[0,1,2]},\"remove\":{}}"));
