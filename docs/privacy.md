@@ -87,6 +87,14 @@ Prime Video のページで広告の検出がうまくいかないときの手�
 
 利用者のデータを、第三者に提供・販売・貸与・譲渡しません。広告・信用調査・融資の判断など、拡張機能の機能と関係のない目的にも使いません。
 
+#### Chrome ウェブストアのユーザーデータ ポリシーへの準拠
+
+ADBAN による、ブラウザー API を通じて得た情報の使用と、その情報のほかのアプリへの移転は、「限定的な使用（Limited Use）」の要件を含む、[Chrome ウェブストアのユーザーデータ ポリシー](https://developer.chrome.com/docs/webstore/program-policies/limited-use)に準拠します。
+
+- 得た情報は、利用者に見える機能（広告・トラッカーのブロック、ポップアップ広告を閉じる、問題の報告など）を提供・改善するためだけに、ブラウザーの中で使います。
+- 第三者への販売・移転は行いません。広告の表示、信用や貸付の判断、データブローカーへの提供などには使いません。
+- 人が読むことはありません（拡張機能は、情報をどこにも送らないため）。
+
 ### 7. 権限について
 
 本拡張機能が要求する権限と、その使い方は次のとおりです。
@@ -201,6 +209,14 @@ The Extension does **not** send the contents of a report automatically. They rea
 ### 6. Sharing with third parties
 
 We do not share, sell, rent, or transfer user data to third parties. We do not use it for purposes unrelated to the Extension's functions, such as advertising or credit decisions.
+
+#### Compliance with the Chrome Web Store User Data Policy
+
+ADBAN's use and transfer to any other app of information received through browser APIs will adhere to the [Chrome Web Store User Data Policy](https://developer.chrome.com/docs/webstore/program-policies/limited-use), including the Limited Use requirements.
+
+- The information is used only inside your browser, only to provide or improve user-facing features (blocking ads and trackers, closing pop-up ads, reporting a problem, and so on).
+- It is not sold or transferred to third parties, and it is not used for serving ads, for creditworthiness or lending decisions, or to be given to data brokers.
+- No human reads it (the extension does not send the information anywhere).
 
 ### 7. Permissions
 
