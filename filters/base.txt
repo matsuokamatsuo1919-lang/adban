@@ -157,3 +157,5 @@ youtube.com##ytd-merch-shelf-renderer
 youtube.com##ytm-promoted-sparkles-web-renderer
 youtube.com##ad-slot-renderer
 youtube.com##ytm-companion-ad-renderer
+youtube.com##ytd-enforcement-message-view-model
+youtube.com##tp-yt-paper-dialog:has(ytd-enforcement-message-view-model)

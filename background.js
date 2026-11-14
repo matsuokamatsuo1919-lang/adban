@@ -7,6 +7,7 @@ import { ALLOW_ID_BASE, CUSTOM_ID_BASE, compileFilterList, isUsableSelector } fr
 import { CosmeticEngine, hideRule, styleRule } from './lib/cosmetic.js';
 import { hostOf, isListed, siteKey } from './lib/hosts.js';
 import { SCRIPTLET_ENTITY_TLDS } from './lib/entity-tlds.js';
+import { youtubeAllowRules } from './lib/youtube-allow.js';
 import './popup-blocker.js'; // 広告のポップアップを閉じる（$popup）
 import './auto-update.js'; // rules/meta.json の更新を見て、自動で再読み込みする
 
@@ -22,7 +23,7 @@ const DEFAULTS = {
 };
 
 // 動的ルールのうち、拡張機能が内部で使うもの（CUSTOM_ID_BASE 未満）
-const RULE_ID = { disableAll: 1, allowlist: 2 };
+const RULE_ID = { disableAll: 1, allowlist: 2, youtubeFirstParty: 3, youtubeGoogle: 4 };
 const STATIC_RULESETS = chrome.runtime.getManifest().declarative_net_request.rule_resources.map((r) => r.id);
 const YOUTUBE_SCRIPT_ID = 'adban-youtube';
 const SCRIPTLET_SCRIPT_ID = 'adban-scriptlets';
@@ -109,6 +110,8 @@ async function applyBrowserState() {
       condition: { requestDomains: allowDomains(), resourceTypes: ['main_frame', 'sub_frame'] },
     });
   }
+  // YouTube 自身の計測通信は、広告ブロッカーの検出の材料にされないよう、静的ルールのブロックより優先して許可する
+  if (settings.enabled) system.push(...youtubeAllowRules(RULE_ID));
   const removeRuleIds = (await dnr.getDynamicRules()).map((r) => r.id);
   try {
     await dnr.updateDynamicRules({ removeRuleIds, addRules: [...system, ...(settings.enabled ? customRules : [])] });

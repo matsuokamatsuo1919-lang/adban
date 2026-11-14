@@ -198,10 +198,18 @@
 
   const skipYouTubeAds = () => {
     let saved = null; // 広告の前の音量・再生速度
+    let lastResume = 0; // 警告ダイアログで止まった再生を最後に再開しようとした時刻
     setInterval(() => {
       const player = document.querySelector('#movie_player, .html5-video-player');
       const video = player?.querySelector('video');
       if (!video) return;
+      // 広告ブロッカーの警告ダイアログで止まった再生を再開する（1 秒に 1 回まで）
+      if (video.paused && document.querySelector('ytd-enforcement-message-view-model') && Date.now() - lastResume >= 1000) {
+        lastResume = Date.now();
+        try {
+          video.play()?.catch(() => {});
+        } catch { /* 再生できない状態。次の確認でやり直す */ }
+      }
       const ad = player.classList.contains('ad-showing') || player.classList.contains('ad-interrupting');
       if (ad) {
         saved ??= { muted: video.muted, rate: video.playbackRate };
